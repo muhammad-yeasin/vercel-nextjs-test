@@ -92,29 +92,10 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-6">
-          <div className="mb-6">
-            <h4 className="font-bold mb-3">Newsletter</h4>
-            <p className="text-gray-400 mb-3 text-sm">
-              Subscribe for exclusive offers and updates
-            </p>
-            <div className="flex max-w-md">
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="flex-1 px-4 py-2 rounded-l-lg text-gray-900 focus:outline-none"
-              />
-              <button className="bg-purple-600 px-6 py-2 rounded-r-lg hover:bg-purple-700 transition font-semibold">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
-
         <div className="border-t border-gray-800 pt-6 text-center text-gray-400 text-sm">
           <p>
-            &copy; 2024 ShopHub. All rights reserved. | Privacy Policy | Terms
-            of Service
+            &copy; 2024 NexFy. All rights reserved. | Privacy Policy | Terms of
+            Service
           </p>
         </div>
       </div>
