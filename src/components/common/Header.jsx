@@ -35,7 +35,7 @@ const Header = () => {
           <span>🎉 Free shipping on orders over $50!</span>
           <div className="hidden md:flex gap-4">
             <span className="flex items-center gap-1">
-              <Phone className="w-4" /> 1-800-SHOP-NOW
+              <Phone className="w-4" /> +880 1861000000
             </span>
             <span className="flex items-center gap-1">
               <Mail className="w-4" /> support@nexfy.com{" "}
@@ -46,12 +46,14 @@ const Header = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex gap-1 items-center">
+          <d className="flex gap-1 items-center">
             <div className="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center font-bold text-blue-600">
               N
             </div>
-            <h1 className="text-4xl font-bold text-blue-600">NexFy</h1>
-          </div>
+            <Link href={"/"} className="text-4xl font-bold text-blue-600">
+              NexFy
+            </Link>
+          </d>
 
           <nav className="hidden md:flex items-center space-x-6">
             {menus}

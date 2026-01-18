@@ -41,7 +41,7 @@ body {
 
 /* Custom range slider */
 input[type="range"] {
-  @apply appearance-none bg-transparent;
+  @apply appearance-none bg-blue-100;
 }
 
 input[type="range"]::-webkit-slider-thumb {

@@ -152,7 +152,7 @@ export default function ProductsPage() {
         </h3>
         <button
           onClick={resetFilters}
-          className="text-sm text-blue-600 hover:text-blue-800 font-medium"
+          className="text-sm font-semibold text-blue-600 hover:text-blue-800 font-medium cursor-pointer"
         >
           Reset All
         </button>
@@ -174,7 +174,7 @@ export default function ProductsPage() {
             onChange={(e) =>
               setPriceRange([parseInt(e.target.value), priceRange[1]])
             }
-            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+            className="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer"
           />
           <input
             type="range"
@@ -185,7 +185,7 @@ export default function ProductsPage() {
             onChange={(e) =>
               setPriceRange([priceRange[0], parseInt(e.target.value)])
             }
-            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+            className="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer"
           />
         </div>
       </div>
@@ -314,7 +314,7 @@ export default function ProductsPage() {
               placeholder="Search products by name or description..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+              className="w-full pl-12 pr-4 py-3 bg-white text-black border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
             />
             {searchTerm && (
               <button
@@ -338,7 +338,7 @@ export default function ProductsPage() {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="px-4 py-3 bg-white border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+              className="px-4 py-3 bg-white text-black border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
             >
               <option value="price-low-high">Price: Low to High</option>
               <option value="price-high-low">Price: High to Low</option>
@@ -448,7 +448,7 @@ export default function ProductsPage() {
                           className={`w-10 h-10 rounded-lg font-medium transition-colors ${
                             currentPage === page
                               ? "bg-blue-600 text-white"
-                              : "border border-gray-300 hover:bg-gray-50"
+                              : "border border-gray-300 text-black hover:bg-gray-50"
                           }`}
                         >
                           {page}
@@ -461,7 +461,7 @@ export default function ProductsPage() {
                         setCurrentPage((prev) => Math.min(prev + 1, totalPages))
                       }
                       disabled={currentPage === totalPages}
-                      className="p-2 rounded-lg border border-gray-300 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="p-2 rounded-lg border text-black border-gray-300 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       <ChevronRightIcon className="w-5 h-5" />
                     </button>
