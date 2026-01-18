@@ -18,7 +18,7 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const router = useRouter();
 
-  const logout = () => {
+  const logout = () => { 
     Cookies.remove("isLoggedIn");
     router.push("/login");
   };
