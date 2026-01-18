@@ -18,8 +18,8 @@ const useAuth = () => {
   return {
     user: {
       photoURL: "https://i.ibb.co/vxmbWxr3/Mohyminul-Islam-small.png",
-      displayName: "John Doe",
-      email: "john.doe@example.com",
+      displayName: "Mohyminul Islam",
+      email: "mohyminulislam@gmail.com",
     },
   };
 };
@@ -194,7 +194,7 @@ const ProductDetails = () => {
                         fillOpacity="0.35"
                       />
                     </svg>
-                  )
+                  ),
                 )}
               <p className="text-base ml-2">({product.rating})</p>
             </div>
@@ -323,7 +323,7 @@ const ProductDetails = () => {
                             <span className="text-sm text-gray-600">
                               {format(
                                 new Date(review.createdAt),
-                                "dd MMM yyyy, hh:mm a"
+                                "dd MMM yyyy, hh:mm a",
                               )}
                             </span>
                           </div>
