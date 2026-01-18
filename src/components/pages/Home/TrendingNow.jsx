@@ -32,7 +32,7 @@ const TrendingNow = () => {
     <section className="py-12 md:py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-center gap-3 mb-10">
-          <TrendingUp className="h-8 w-8 text-purple-600" />
+          <TrendingUp className="h-8 w-8 text-blue-600" />
           <h2 className="text-black text-3xl font-bold">Trending Now</h2>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -43,7 +43,7 @@ const TrendingNow = () => {
             >
               <div className="text-4xl mb-3">{product.image}</div>
               <h3 className="font-semibold text-sm mb-2">{product.name}</h3>
-              <p className="text-purple-600 font-bold mb-1">${product.price}</p>
+              <p className="text-blue-600 font-bold mb-1">${product.price}</p>
               <div className="flex items-center justify-center text-green-600 text-xs">
                 <TrendingUp className="h-3 w-3 mr-1" />
                 <span>{product.trend}</span>

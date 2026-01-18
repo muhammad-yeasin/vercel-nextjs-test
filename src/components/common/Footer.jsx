@@ -7,18 +7,18 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-purple-400">ShopHub</h3>
+            <h3 className="text-2xl font-bold mb-4 text-blue-400">ShopHub</h3>
             <p className="text-gray-400 mb-4">
               Your one-stop destination for quality products at amazing prices.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-purple-400 transition">
+              <a href="#" className="hover:text-blue-400 transition">
                 Facebook
               </a>
-              <a href="#" className="hover:text-purple-400 transition">
+              <a href="#" className="hover:text-blue-400 transition">
                 Twitter
               </a>
-              <a href="#" className="hover:text-purple-400 transition">
+              <a href="#" className="hover:text-blue-400 transition">
                 Instagram
               </a>
             </div>

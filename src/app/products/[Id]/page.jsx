@@ -24,31 +24,22 @@ const useAuth = () => {
   };
 };
 
+async function getPosts(id) {
+  const res = await fetch(`http://localhost:3000/products/${id}`, {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
 const ProductDetails = () => {
   const params = useParams();
-  const id = params?.id;
+  const id = params?.Id;
+  const product = getPosts(id);
   const { user } = useAuth();
-
-  const product = {
-    name: "Nike Pegasus 41 shoes",
-    category: "Sports",
-    price: 189,
-    offerPrice: 159,
-    rating: 4,
-    images: [
-      "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/card/productImage.png",
-      "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/card/productImage2.png",
-      "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/card/productImage3.png",
-      "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/card/productImage4.png",
-    ],
-    description: [
-      "High-quality material",
-      "Comfortable for everyday use",
-      "Available in different sizes",
-    ],
-    descriptions:
-      "This is a high-performance running shoe designed for comfort and durability. Perfect for both casual runners and serious athletes.",
-  };
 
   const reviewsData = [
     {
@@ -62,8 +53,7 @@ const ProductDetails = () => {
     },
   ];
 
-  const [thumbnail, setThumbnail] = useState(product.images[0]);
-  const [quantity, setQuantity] = useState(1);
+  // const [thumbnail, setThumbnail] = useState(product.images[0]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -128,7 +118,7 @@ const ProductDetails = () => {
           {/* Image Gallery */}
           <div className="flex gap-3">
             <div className="flex flex-col gap-3">
-              {product.images.map((image, index) => (
+              {product?.images?.map((image, index) => (
                 <div
                   key={index}
                   onClick={() => setThumbnail(image)}
@@ -147,13 +137,13 @@ const ProductDetails = () => {
               ))}
             </div>
 
-            <div className="border border-gray-500/30 max-w-md rounded overflow-hidden">
+            {/* <div className="border border-gray-500/30 max-w-md rounded overflow-hidden">
               <img
                 src={thumbnail}
                 alt="Selected product"
                 className="w-full h-full object-cover"
               />
-            </div>
+            </div> */}
           </div>
 
           {/* Product Info */}
@@ -211,13 +201,13 @@ const ProductDetails = () => {
             {/* Description */}
             <p className="text-base font-medium mt-6">About Product</p>
             <ul className="list-disc ml-4 text-gray-500/70">
-              {product.description.map((desc, index) => (
+              {product?.description?.map((desc, index) => (
                 <li key={index}>{desc}</li>
               ))}
             </ul>
 
             {/* Quantity Selector */}
-            <div className="flex items-center gap-3 mt-6">
+            {/* <div className="flex items-center gap-3 mt-6">
               <button
                 onClick={() => handleQuantityChange("decrement")}
                 className="w-8 h-8 border border-gray-300 rounded hover:bg-gray-100 transition"
@@ -231,7 +221,7 @@ const ProductDetails = () => {
               >
                 +
               </button>
-            </div>
+            </div> */}
 
             {/* Action Buttons */}
             <div className="flex items-center mt-10 gap-4 text-base">

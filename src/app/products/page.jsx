@@ -10,7 +10,7 @@ import {
   ChevronRightIcon,
 } from "@heroicons/react/24/outline";
 import { Star, Filter } from "lucide-react";
-import Product from "@/components/Cards/Product";
+import Product from "@/app/products/_components/Cards/Product";
 
 async function getPosts() {
   const res = await fetch("http://localhost:3000/products/", {

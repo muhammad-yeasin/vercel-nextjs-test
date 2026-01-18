@@ -53,7 +53,7 @@ const Testimonials = () => {
               </div>
               <p className="text-gray-700 mb-4 italic">{testimonial.text}</p>
               <div className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-purple-200 rounded-full flex items-center justify-center font-bold text-purple-600">
+                <div className="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center font-bold text-blue-600">
                   {testimonial.name.charAt(0)}
                 </div>
                 <div>

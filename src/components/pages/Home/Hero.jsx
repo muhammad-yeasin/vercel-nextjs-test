@@ -9,7 +9,7 @@ const Hero = () => {
       title: "Summer Collection 2024",
       subtitle: "Up to 50% Off",
       description: "Discover the latest trends in fashion",
-      bg: "bg-linear-to-r from-pink-500 to-purple-600",
+      bg: "bg-linear-to-r from-pink-500 to-blue-600",
     },
     {
       title: "New Arrivals",
@@ -29,7 +29,7 @@ const Hero = () => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
   const prevSlide = () =>
     setCurrentSlide(
-      (prev) => (prev - 1 + heroSlides.length) % heroSlides.length
+      (prev) => (prev - 1 + heroSlides.length) % heroSlides.length,
     );
   return (
     <section className="relative h-96 md:h-[80vh] overflow-hidden">
@@ -47,7 +47,7 @@ const Hero = () => {
               </h2>
               <p className="text-2xl md:text-3xl mb-2">{slide.subtitle}</p>
               <p className="text-lg md:text-xl mb-6">{slide.description}</p>
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
                 Shop Now
               </button>
             </div>

@@ -1,4 +1,5 @@
 import { CheckIcon, Star } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 const Product = ({ product }) => {
@@ -22,7 +23,8 @@ const Product = ({ product }) => {
     }).format(price);
   };
   return (
-    <div
+    <Link
+      href={`/products/${product._id}`}
       key={product._id}
       className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300"
     >
@@ -100,7 +102,7 @@ const Product = ({ product }) => {
           </button>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

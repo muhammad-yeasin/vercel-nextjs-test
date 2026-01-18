@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Newsletter = () => {
   return (
-    <section className="bg-purple-50 py-14">
+    <section className="bg-blue-50 py-14">
       <div className="bg-white md:grid md:grid-cols-2 max-w-4xl mx-4 md:mx-auto rounded-xl">
         <div className="hidden md:block w-full max-w-lg rounded-xl">
           <Image
@@ -31,7 +31,7 @@ const Newsletter = () => {
               />
               <button
                 type="submit"
-                className="rounded-r-md bg-purple-600 px-3 py-2 text-white cursor-pointer"
+                className="rounded-r-md bg-blue-600 px-3 py-2 text-white cursor-pointer"
               >
                 Subscribe
               </button>
