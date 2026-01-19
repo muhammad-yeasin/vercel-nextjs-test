@@ -27,7 +27,7 @@ import Loading from "@/components/Loading";
 
 const ProductDetails = () => {
   const params = useParams();
-  const id = params?.Id;
+  const id = params?.id;
   // const { user } = useAuth();
 
   // // State Management
